@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Una pequeña ventana al azar: citas, perros, gatos y curiosidades desde cuatro APIs públicas.">
+  <title>Explorador de contenido aleatorio · AZAR</title>
+  <link rel="stylesheet" href="assets/explorador.css">
+  <script src="assets/explorador.js" defer></script>
+</head>
+<body>
+  <a class="salto" href="#coleccion">Saltar al contenido</a>
+  <header class="barra">
+    <a class="marca" href="#inicio" aria-label="AZAR, inicio"><span aria-hidden="true">✳</span> AZAR</a>
+    <span class="materia">PROGRAMACIÓN WEB III</span>
+  </header>
+
+  <main id="inicio">
+    <section class="portada" aria-labelledby="titulo">
+      <div>
+        <p class="etiqueta">PEQUEÑOS DESCUBRIMIENTOS, CADA DÍA</p>
+        <h1 id="titulo">Explorador de<br>contenido <em>aleatorio.</em></h1>
+      </div>
+      <div class="portada__nota">
+        <span class="asterisco" aria-hidden="true">✳</span>
+        <p>No hace falta buscar algo.<br>A veces basta con dejarse sorprender.</p>
+        <a href="#coleccion">Empieza a explorar <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section id="coleccion" class="coleccion" aria-labelledby="titulo-coleccion">
+      <div class="coleccion__cabecera">
+        <h2 id="titulo-coleccion">¿Qué te trae el azar?</h2>
+        <p>Cuatro ventanas. Tú eliges cuál abrir otra vez.</p>
+      </div>
+      <div class="ventanas">
+        <article class="ventana ventana--cita" data-panel="cita" aria-labelledby="titulo-cita" aria-busy="true">
+          <div class="ventana__indice"><span>01</span><a href="https://dummyjson.com/docs/quotes">DummyJSON ↗</a></div>
+          <h3 id="titulo-cita">Una idea.</h3>
+          <p class="ventana__descripcion">Citas y sus autores</p>
+          <div class="ventana__cuerpo">
+            <p class="espera" role="status"><span class="indicador" aria-hidden="true"></span>Cargando…</p>
+            <div class="resultado" hidden>
+              <figure class="cita"><span class="comilla" aria-hidden="true">“</span><blockquote></blockquote><figcaption></figcaption></figure>
+            </div>
+            <p class="aviso" role="alert" hidden></p>
+          </div>
+          <p class="registro" aria-live="polite">Preparando tu primer descubrimiento</p>
+          <button type="button" disabled>Obtener otra cita <span aria-hidden="true">↻</span></button>
+        </article>
+
+        <article class="ventana ventana--perro" data-panel="perro" aria-labelledby="titulo-perro" aria-busy="true">
+          <div class="ventana__indice"><span>02</span><a href="https://dog.ceo/dog-api/documentation/random">Dog CEO ↗</a></div>
+          <h3 id="titulo-perro">Un compañero.</h3>
+          <p class="ventana__descripcion">Perros de todos los tamaños</p>
+          <div class="ventana__cuerpo">
+            <p class="espera" role="status"><span class="indicador" aria-hidden="true"></span>Cargando…</p>
+            <div class="resultado foto" hidden><img alt="Perro elegido al azar por Dog CEO" width="480" height="360"></div>
+            <p class="aviso" role="alert" hidden></p>
+          </div>
+          <p class="registro" aria-live="polite">Preparando tu primer descubrimiento</p>
+          <button type="button" disabled>Mostrar otro perro <span aria-hidden="true">↻</span></button>
+        </article>
+
+        <article class="ventana ventana--gato" data-panel="gato" aria-labelledby="titulo-gato" aria-busy="true">
+          <div class="ventana__indice"><span>03</span><a href="https://cataas.com/">CATAAS ↗</a></div>
+          <h3 id="titulo-gato">Una mirada.</h3>
+          <p class="ventana__descripcion">Gatos con personalidad</p>
+          <div class="ventana__cuerpo">
+            <p class="espera" role="status"><span class="indicador" aria-hidden="true"></span>Cargando…</p>
+            <div class="resultado foto" hidden><img alt="Gato elegido al azar por CATAAS" width="480" height="360"></div>
+            <p class="aviso" role="alert" hidden></p>
+          </div>
+          <p class="registro" aria-live="polite">Preparando tu primer descubrimiento</p>
+          <button type="button" disabled>Mostrar otro gato <span aria-hidden="true">↻</span></button>
+        </article>
+
+        <article class="ventana ventana--dato" data-panel="dato" aria-labelledby="titulo-dato" aria-busy="true">
+          <div class="ventana__indice"><span>04</span><a href="https://uselessfacts.jsph.pl/">Useless Facts ↗</a></div>
+          <h3 id="titulo-dato">Algo nuevo.</h3>
+          <p class="ventana__descripcion">Curiosidades para compartir</p>
+          <div class="ventana__cuerpo">
+            <p class="espera" role="status"><span class="indicador" aria-hidden="true"></span>Cargando…</p>
+            <div class="resultado" hidden><p class="dato"></p></div>
+            <p class="aviso" role="alert" hidden></p>
+          </div>
+          <p class="registro" aria-live="polite">Preparando tu primer descubrimiento</p>
+          <button type="button" disabled>Mostrar otro dato <span aria-hidden="true">↻</span></button>
+        </article>
+      </div>
+      <p class="pie-coleccion"><span aria-hidden="true">↻</span> Cada botón trae una nueva respuesta. El azar puede repetir una sorpresa.</p>
+    </section>
+  </main>
+
+  <footer><span><strong>AZAR</strong> / Mathias</span><span>Citas, mascotas y un poco de curiosidad.</span></footer>
+  <noscript><p class="sin-javascript">Activa JavaScript para consultar y mostrar el contenido de las cuatro APIs.</p></noscript>
+</body>
+</html>

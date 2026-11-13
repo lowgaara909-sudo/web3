@@ -1,0 +1,9 @@
+node_modules/
+bin/
+obj/
+.vs/
+.idea/
+.vscode/
+*.log
+Thumbs.db
+.DS_Store
