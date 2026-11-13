@@ -126,7 +126,7 @@ function conectarTarjeta(nombre, consulta) {
   const aviso = panel.querySelector(".aviso");
   const registro = panel.querySelector(".registro");
   let ocupada = false;
-  let descubrimientos = 0;
+  let consultasRealizadas = 0;
 
   async function actualizar() {
     if (ocupada) return;
@@ -136,18 +136,18 @@ function conectarTarjeta(nombre, consulta) {
     espera.hidden = false;
     resultado.hidden = true;
     aviso.hidden = true;
-    registro.textContent = "Buscando tu próxima sorpresa…";
+    registro.textContent = "Consultando…";
 
     try {
       const contenido = await consulta();
       await representar(panel, contenido);
-      descubrimientos += 1;
+      consultasRealizadas += 1;
       resultado.hidden = false;
-      registro.textContent = `${descubrimientos} ${descubrimientos === 1 ? "descubrimiento" : "descubrimientos"} en esta visita`;
+      registro.textContent = `${consultasRealizadas} ${consultasRealizadas === 1 ? "consulta completada" : "consultas completadas"}`;
     } catch (fallo) {
       aviso.textContent = `${fallo.message} Usa el botón para reintentar.`;
       aviso.hidden = false;
-      registro.textContent = "Esta ventana puede volver a intentarlo";
+      registro.textContent = "Puedes volver a intentarlo";
     } finally {
       espera.hidden = true;
       boton.disabled = false;

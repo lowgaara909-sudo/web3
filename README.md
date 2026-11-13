@@ -1,16 +1,16 @@
-# AZAR · Explorador de contenido aleatorio
+# Explorador de contenido aleatorio
 
 **Estudiante:** Mathias
 
 **Materia:** Programación Web III
 
-Implementación nueva realizada con asistencia de Codex a partir de la consigna de la materia. Usa HTML, CSS y JavaScript, sin bibliotecas externas, base de datos ni inicio de sesión.
+Página hecha con HTML, CSS y JavaScript para practicar consultas a APIs. Se utilizó Codex como apoyo durante el desarrollo. No necesita base de datos ni inicio de sesión.
 
 ## Qué hace
 
 Al entrar aparecen cuatro tarjetas con una cita, un perro, un gato y un dato curioso. Cada botón consulta exclusivamente su API. Mientras espera, la tarjeta muestra «Cargando…» y deshabilita su botón. Los errores se muestran dentro de la tarjeta y permiten reintentar sin recargar la página.
 
-El diseño usa cuatro columnas en pantallas amplias, dos en pantallas intermedias y una en teléfonos. Las fotografías ocupan espacios uniformes y usan `object-fit: contain` para mostrarse completas. Cada tarjeta cuenta las consultas exitosas de la visita; los resultados aleatorios pueden repetirse.
+Las tarjetas se organizan en dos columnas en computadora y en una columna en teléfonos. Las fotografías ocupan espacios uniformes y usan `object-fit: contain` para mostrarse completas. Cada tarjeta cuenta las consultas exitosas de la visita; los resultados aleatorios pueden repetirse.
 
 ## Archivos
 

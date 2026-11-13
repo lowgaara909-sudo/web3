@@ -68,7 +68,7 @@ test('inicia cuatro GET y representa datos reales del contrato de cada API', asy
     assert.equal(app.elemento(tipo, 'button').disabled, false);
     assert.equal(app.elemento(tipo, '.resultado').hidden, false);
     assert.equal(app.elemento(tipo, '.espera').hidden, true);
-    assert.equal(app.elemento(tipo, '.registro').textContent, '1 descubrimiento en esta visita');
+    assert.equal(app.elemento(tipo, '.registro').textContent, '1 consulta completada');
   }
   assert.equal(app.relojes.size, 0);
 });
@@ -86,7 +86,7 @@ test('una tarjeta en carga no impide resolver otra y rechaza clics duplicados', 
   assert.equal(app.pendientes[4].url, app.pendientes[3].url);
   app.pendientes[4].resolve(respuesta({ text: 'Otro dato' }));
   await turno();
-  assert.match(app.elemento('dato', '.registro').textContent, /^2 descubrimientos/);
+  assert.match(app.elemento('dato', '.registro').textContent, /^2 consultas completadas/);
   assert.equal(app.elemento('cita', '.resultado').hidden, true);
 });
 
